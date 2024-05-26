@@ -31,6 +31,7 @@ const gameControl= (()=>{
     })
     
     btn.addEventListener("click", ()=>{
+        if (p1.value!= "" && p2.value!=""){
         players= [Player(p1.value,"X"), Player(p2.value,"O")]
         console.log(players)
         playGame = true
@@ -38,7 +39,7 @@ const gameControl= (()=>{
         console.log(currentPlay)
         info.textContent= `${players[0]["player"]}'s turn` 
         start.textContent= "Game started"
-
+        }
     })
     
     const turn= ()=>{
@@ -67,20 +68,24 @@ const gameControl= (()=>{
             index= e.target.dataset.index
             console.log(index)
         if (playGame){
-            if (c.textContent==""){
-                chance = turn()
-                boardState[index]= currentPlay["mark"]
-                e.target.textContent= currentPlay["mark"]
-                if(checkWin()){
-                    playGame=false
-                    info.textContent= `${currentPlay["player"]} has won`
-                    return
-                }
-                if (boardState.every(cell => cell)) {
-                    alert("It's a draw!");
-                    playGame = false;
-                    return;}
-            }  
+            if (p1.value!= "" && p2.value!=""){
+
+                if (c.textContent==""){
+                    chance = turn()
+                    boardState[index]= currentPlay["mark"]
+                    e.target.textContent= currentPlay["mark"]
+                    if(checkWin()){
+                        playGame=false
+                        info.textContent= `${currentPlay["player"]} has won`
+                        return
+                    }
+                    if (boardState.every(cell => cell)) {
+                        alert("It's a draw!");
+                        playGame = false;
+                        return;
+                    }
+                }  
+            }
         }
         else{
             cell.disabled= true
