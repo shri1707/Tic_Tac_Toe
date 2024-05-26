@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="start"></div>
+        <div class="players">
+            <div class="player1">
+                <label for="p1">Player 1: </label>
+                <input type="text" name="p1" id="p1" value="Player 1" placeholder="P1">
+            </div>
+            <div class="player2">
+                <label for="p2">Player 2: </label>
+                <input type="text" name="p2" id="p2" value="Player 2" placeholder="P2">
+            </div>
+            <div class="btn">
+                <button value="Start game">Start Game</button>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+    </div>
+    <div class="bottom">
+
+        <div class="info"></div>
+        <button class="restart"> Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

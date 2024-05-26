@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.start{
+    text-align: center;
+    margin-bottom:20px ;
+}
+
+.players{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.cell{
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    height: 25px;
+    text-align: center;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: rgb(170, 90, 90);
+    margin-top: 40px;
+    height: 50px;
+}
+
+.grid{
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+}
